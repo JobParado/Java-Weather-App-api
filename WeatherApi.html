@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API</title>
+</head>
+<body>
+    <div class="container">
+
+        <div id="weatherResult">
+            <h1>Weather API</h1>
+            <label for="city">Enter City:</label>
+            <input type="text" id="city" name="city">
+            <button>Get Weather</button>
+
+
+            <h2>Weather result:</h2>
+
+            <label >Status:</label>
+            <input type="text"  class="inputs"  readonly><br><br>
+
+            <label >City:</label>
+            <input type="text"  class="inputs"  readonly><br><br>
+
+            <label >Country:</label>
+            <input type="text"  class="inputs"  readonly><br><br>
+
+            <label >Temperature:</label>
+            <input type="text"  class="inputs"  readonly><br><br>
+
+            <label >Feels like:</label>
+            <input type="text"  class="inputs"  readonly><br><br>
+
+            <label >Weather:</label>
+            <input type="text"  class="inputs"  readonly><br><br>
+
+            <label >Humidity:</label>
+            <input type="text"  class="inputs"  readonly><br><br>
+
+            <label >Pressure:</label>
+            <input type="text"  class="inputs"  readonly><br><br>
+
+            <label >Wind:</label>
+            <input type="text"  class="inputs"  readonly><br><br>
+
+            <label >Cloudiness:</label>
+            <input type="text"  class="inputs"  readonly><br><br>
+
+            <label >Visibility:</label>
+            <input type="text"  class="inputs"  readonly><br><br>
+
+            <label >Sunrise:</label>
+            <input type="text"  class="inputs"  readonly><br><br>
+
+            <label >Sunset:</label>
+            <input type="text"  class="inputs"  readonly><br><br>
+        </div>
+    </div>
+</body>
+<style>
+.inputs{
+    cursor: default;
+}
+.container{
+    display: grid;
+    place-items: center;
+}
+#weatherResult{
+    border: 1px solid black;
+    width: 50%;
+    
+}
+#weatherResult h1, #weatherResult h2{
+    text-align: center;
+}
+#weatherResult label, #weatherResult b{
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+}
+#weatherResult input[type="text"]{
+    width: 45%;
+}
+#weatherResult button{
+    margin-left: auto;
+}
+#weatherResult {
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+label,h1, h2 {
+    font-family: Arial, sans-serif;
+}
+</style>
+<script>
+    const apiKey = '25338af6e3d4c2940fce1e75df145668';
+
+    const button = document.querySelector('button');
+    const inputs = document.querySelectorAll('.inputs');
+
+    button.addEventListener('click', () => {
+        const city = document.getElementById('city').value;
+        if (!city) {
+            alert('Please enter a city name.');
+            return;
+        }
+
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('City not found');
+                }
+                return response.json();
+            })
+            .then(data => {
+                inputs[0].value = 'Success';
+                inputs[1].value = data.name;
+                inputs[2].value = data.sys.country;
+                inputs[3].value = `${data.main.temp} °C`;
+                inputs[4].value = `${data.main.feels_like} °C`;
+                inputs[5].value = data.weather[0].description;
+                inputs[6].value = `${data.main.humidity} %`;
+                inputs[7].value = `${data.main.pressure} hPa`;
+                inputs[8].value = `${data.wind.speed} m/s`;
+                inputs[9].value = `${data.clouds.all} %`;
+                inputs[10].value = `${data.visibility} meters`;
+                inputs[11].value = new Date(data.sys.sunrise * 1000).toLocaleTimeString();
+                inputs[12].value = new Date(data.sys.sunset * 1000).toLocaleTimeString();
+            })
+            .catch(error => {
+                inputs.forEach(input => input.value = '');
+                inputs[0].value = 'Error: ' + error.message;
+            });
+    });
+</script>
+</html>

@@ -51,7 +51,7 @@ git clone https://github.com/yourusername/java-weather-api-gui.git](https://gith
 This project requires an API key from [OpenWeatherMap](https://openweathermap.org/api) (or whichever weather API you’re using). For security reasons, the `.env` file is **not included** in the repository.
 
 1. Sign up at OpenWeatherMap and generate your API key.   
-2. Edit the existing file and paste your own API key:  
+2. Edit the existing file and paste your own API key and change its file type from .TXT to .env :  
 
 API_KEY=your_api_key_here
 

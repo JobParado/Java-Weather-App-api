@@ -41,7 +41,7 @@ The application demonstrates how to:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/java-weather-api-gui.git](https://github.com/JobParado/Java-Weather-App-api
+git clone https://github.com/yourusername/java-weather-api-gui.git](https://github.com/JobParado/Java-Weather-App-api](https://github.com/JobParado/Java-Weather-App-api
 ```
 
 ### 2. Open On the Folder (Java Weather API\dist)
@@ -50,8 +50,8 @@ git clone https://github.com/yourusername/java-weather-api-gui.git](https://gith
 
 This project requires an API key from [OpenWeatherMap](https://openweathermap.org/api) (or whichever weather API you’re using). For security reasons, the `.env` file is **not included** in the repository.
 
-1. Sign up at OpenWeatherMap and generate your API key.   
-2. Edit the existing file and paste your own API key and change its file type from .TXT to .env :  
+1. Sign up at OpenWeatherMap and generate and get your own API key for security purposes.   
+2. Edit the existing file and paste your own API key and change its file type and remove its name it goes from (README.TXT) to (.env) :  
 
 API_KEY=your_api_key_here
 
@@ -64,7 +64,6 @@ API_KEY=your_api_key_here
 The application sends a GET request to the weather API using the city name entered by the user. The response is parsed and displayed in the GUI.
 
 Example endpoint:
-
 ```
 https://api.openweathermap.org/data/2.5/weather?q=USA&appid=your_api_key&units=metric
 ```

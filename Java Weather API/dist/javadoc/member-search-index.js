@@ -1,1 +1,0 @@
-memberSearchIndex = [{"p":"mainFolder","c":"MainFrame","l":"main(String[])","u":"main(java.lang.String[])"},{"p":"mainFolder","c":"MainFrame","l":"MainFrame()","u":"%3Cinit%3E()"}];updateSearchResults();

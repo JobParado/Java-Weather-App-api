@@ -42,8 +42,21 @@ The application demonstrates how to:
 
 ```bash
 git clone https://github.com/yourusername/java-weather-api-gui.git](https://github.com/JobParado/Java-Weather-App-api
-cd java-weather-api-gui
 ```
+
+### 2. Open On the Folder (Java Weather API\dist)
+
+**API Key Setup**
+
+This project requires an API key from [OpenWeatherMap](https://openweathermap.org/api) (or whichever weather API you’re using). For security reasons, the `.env` file is **not included** in the repository.
+
+1. Sign up at OpenWeatherMap and generate your API key.   
+2. Edit the existing file and paste your own API key:  
+
+API_KEY=your_api_key_here
+
+3. Run the Weather.jar The JAR will load the API key from `.env` using the `dotenv-java` library.
+4. U can get the result of the input city on the GUI.
 
 
 ## How the API Call Works

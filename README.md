@@ -41,7 +41,7 @@ The application demonstrates how to:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/java-weather-api-gui.git
+git clone https://github.com/yourusername/java-weather-api-gui.git](https://github.com/JobParado/Java-Weather-App-api
 cd java-weather-api-gui
 ```
 

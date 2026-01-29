@@ -32,7 +32,7 @@ The application demonstrates how to:
 - Swing (GUI)
 - `org.json` for JSON parsing
 - `dotenv-java` for environment variable management
-- OpenWeatherMap API (or similar)
+- OpenWeatherMap API
 
 ---
 

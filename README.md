@@ -17,9 +17,9 @@ The application demonstrates how to:
 
 - Input field for city name
 - Displays weather data including:
-  - Temperature and "feels like" temperature
-  - Humidity, pressure, wind speed
-  - Cloudiness, visibility, sunrise and sunset times
+- Temperature and "feels like" temperature
+- Humidity, pressure, wind speed
+- Cloudiness, visibility, sunrise and sunset times
 - Error handling for invalid city names or API failures
 - Confirmation message on successful data retrieval
 
@@ -41,7 +41,7 @@ The application demonstrates how to:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/java-weather-api-gui.git](https://github.com/JobParado/Java-Weather-App-api](https://github.com/JobParado/Java-Weather-App-api
+git clone https://github.com/JobParado/Java-Weather-App-api
 ```
 
 ### 2. Open On the Folder (Java Weather API\dist)

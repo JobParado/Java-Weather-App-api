@@ -55,8 +55,8 @@ This project requires an API key from [OpenWeatherMap](https://openweathermap.or
 
 API_KEY=your_api_key_here
 
-3. Run the Weather.jar The JAR will load the API key from `.env` using the `dotenv-java` library.
-4. U can get the result of the input city on the GUI.
+3. Make sure that the .env file is on folder dist
+4. Open the jar executable program on dist folder and try inputing a city to get an information about the weather of specific area.
 
 
 ## How the API Call Works

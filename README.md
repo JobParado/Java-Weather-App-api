@@ -82,9 +82,3 @@ This project is designed to help you learn:
 
 ---
 
-## License
-
-This project is open-source under the MIT License.
-
----
-
